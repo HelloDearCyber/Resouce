@@ -13,7 +13,37 @@ let chnl_link = document.querySelectorAll(".chnl-link a");
 let abt_chnl = document.querySelector(".abt-chnl");
 let contact = document.querySelectorAll(".contact a");
 let footer = document.querySelector("footer");
-
+function abt_btn_click() {
+  var about_btn = document.querySelector(".about-btn");
+  timer = 1;
+  bot_links.forEach((i) => {
+    i.style.animation = `linksBtnAn 2s ease ${timer}s infinite ,strtLoad 1s ease ${timer}s forwards`;
+    timer += 0.3;
+  });
+  timer = 0;
+  dldBtn_outer.style.display = "none";
+  file_name.style.display = "none";
+  footer.style.display = "none";
+  about_nav.style.display = "block";
+  about_nav.style.display = "block";
+  about_nav.style.animation = "strtLoad 1s ease 0s forwards";
+  var links = document.querySelectorAll(".nryt a");
+  links.forEach(function (link) {
+    link.classList.remove("active");
+  });
+  about_btn.classList.add("active");
+  var links = document.querySelectorAll(".about-nav a");
+  links.forEach(function (link) {
+    link.classList.remove("active");
+  });
+  let wlcm = document.querySelector(".wlcm");
+  wlcm.classList.add("active");
+  var links = document.querySelectorAll(".about-nav a");
+  links.forEach(function (link) {
+    link.classList.remove("active");
+  });
+  wlcm.classList.add("active");
+}
 let timer = 0;
 
 if (document.getElementById("heading").classList.contains("title")) {
